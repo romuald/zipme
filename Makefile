@@ -18,7 +18,6 @@ TMPMAIN := ${TMPDIR}/__main__.py
 default: build
 
 clean:
-	rm -f ${TMPZIP}
 	find ${SCRDIR} -name '*.py[co]' -delete
 
 build: clean
