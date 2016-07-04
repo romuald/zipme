@@ -1,5 +1,5 @@
 # Directory where source resides
-SCRDIR := src
+SRCDIR := src
 
 # Main package name
 PACKAGE := zipme
@@ -18,10 +18,10 @@ TMPMAIN := ${TMPDIR}/__main__.py
 default: build
 
 clean:
-	find ${SCRDIR} -name '*.py[co]' -delete
+	find ${SRCDIR} -name '*.py[co]' -delete
 
 build: clean
-	cd ${SCRDIR} && zip -r ../${TMPZIP} *
+	cd ${SRCDIR} && zip -r ../${TMPZIP} *
 	echo ${MAIN} > ${TMPMAIN}
 	zip -j ${TMPZIP} ${TMPMAIN}
 
